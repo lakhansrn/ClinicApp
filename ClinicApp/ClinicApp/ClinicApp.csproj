@@ -313,6 +313,10 @@
       <Project>{f6b21ab3-dc69-4167-bc13-cc864fac926f}</Project>
       <Name>ClinicAppBL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClinicAppDAL\ClinicAppDAL.csproj">
+      <Project>{26931105-256B-4132-9144-062B69D9B6E1}</Project>
+      <Name>ClinicAppDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClinicAppModels\ClinicAppModels.csproj">
       <Project>{1bb968e1-d42e-401c-9691-864bcc1d9e01}</Project>
       <Name>ClinicAppModels</Name>
