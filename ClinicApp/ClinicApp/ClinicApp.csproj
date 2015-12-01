@@ -187,7 +187,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -304,9 +303,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicAppBL\ClinicAppBL.csproj">
+      <Project>{f6b21ab3-dc69-4167-bc13-cc864fac926f}</Project>
+      <Name>ClinicAppBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicAppModels\ClinicAppModels.csproj">
+      <Project>{1bb968e1-d42e-401c-9691-864bcc1d9e01}</Project>
+      <Name>ClinicAppModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

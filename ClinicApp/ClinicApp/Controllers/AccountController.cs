@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using ClinicApp.Filters;
-using ClinicApp.Models;
+using ClinicAppDAL.DBContext;
+using ClinicAppModels;
 
 namespace ClinicApp.Controllers
 {
@@ -263,7 +263,7 @@ namespace ClinicApp.Controllers
             if (ModelState.IsValid)
             {
                 // Insert a new user into the database
-                using (UsersContext db = new UsersContext())
+                using (ClinicAppDBContext db = new ClinicAppDBContext())
                 {
                     UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == model.UserName.ToLower());
                     // Check if user already exists
